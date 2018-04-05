@@ -1,3 +1,48 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**** navbar ****/
+
+nav {
+  width: 100%;
+  color: #104E8B;
+  background-color: #E0EEEE;
+  font-size: 1.5em;
+  height: 2.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: Merriweahter, Cambria, Georgia, serif;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+/**** footer ****/
+
+.site-footer {
+  color: #104E8B;
+  background: #E0EEEE;
+  height: 2em;
+  text-align: right;
+  padding-top: 1em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/**** general ****/
+
+h1 {
+  font-size: 2em;
+  color: red;
+  text-align: center;
+  font-family: Merriweahter, Cambria, Georgia, serif;
+}
+
+* {
+  margin: 0;
+}
