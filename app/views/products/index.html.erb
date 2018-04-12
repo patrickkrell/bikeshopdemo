@@ -8,16 +8,7 @@
 
 <div class="container-fluid">
     <div class="row">
-      <% @products.each do |product| %>
-      <div class="col-md-4">
-        <a href="#"><h2><%= product.name %></h2></a>
-        <%= image_tag(product.image_url, class: "img-responsive") if product.image_url %>
-        <p><%= product.description %></p>
-        <p>Colour: <%= product.colour %></p>
-        <p> Only <%= product.price %> $</p> 
-        <%= link_to 'Show', product %> <%= link_to 'Edit', edit_product_path(product) %> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div> <!-- end col -->
-     <% end %> 
+      <%= render partial: "product" %>
     </div> <!-- end row -->
   </div> <!-- end container -->
 
