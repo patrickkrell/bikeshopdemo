@@ -1,34 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container-fludi">
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+      <%= image_tag(@product.image_url, class: "img-responsive") %>
+      </p>
+    </div> <!-- end col -->
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <div class="col-md-6">
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>String:</strong>
-  <%= @product.string %>
-</p>
+      <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+      </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+      <p>
+        <strong>Price:</strong>
+        <%= number_to_currency(@product.price, unit: '€', precision: 2) %>
+      </p>
+    </div> <!-- end col -->
+  </div> <!-- end row -->
+</div> <!-- end container -->
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

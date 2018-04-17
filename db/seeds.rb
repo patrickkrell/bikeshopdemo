@@ -2,6 +2,5 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+# Product.create(name: "seed-generated product", description: "Test", image_url: "http://localhost:3000/assets/bike1.jpg", colour: "black", price: "1200")
