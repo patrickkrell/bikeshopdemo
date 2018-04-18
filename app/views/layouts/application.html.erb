@@ -17,15 +17,38 @@
   </head>
 
   <body>
-
+  
 	<nav>
-	  <ul>
-	    <li><%= link_to "Home", root_path %></li>
-	    <li><%= link_to "About", simple_pages_about_path %></li>
-	    <li><%= link_to "Contact", simple_pages_contact_path %></li>
-      <li><%= link_to "Products", products_path %></li>
-      <li><%= link_to "Orders", orders_path %></li>
-	  </ul>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6" id="navigation">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", simple_pages_about_path %></li>
+            <li><%= link_to "Contact", simple_pages_contact_path %></li>
+            <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "Orders", orders_path %></li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <div class="search">
+            <ul>  
+              <li>
+                <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                <%= form.text_field :q, id: 'q', value: params[:q], class: "form-controll", placeholder: " Looking for a Bike?" %>
+                <%= form.submit 'Search', class: 'btn btn-primary', id: "searchbutton"%>
+                <% end %>
+              </li>
+            </ul>
+         </div> 
+        </div>
+        <div class="col-md-offset-1">
+          
+        </div>
+      </div>
+    </div>
+	  
+   
 	</nav>
 
     <%= yield %>

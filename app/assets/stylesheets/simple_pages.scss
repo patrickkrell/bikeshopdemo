@@ -15,16 +15,36 @@ nav {
   background-color: #E0EEEE;
   color: #104E8B;
   font-weight: bold;
-  padding-top: 1em;
+  word-spacing: 1em;
 }
 
 nav li {
   display: inline-block;
   text-transform: uppercase;
-  padding: 0.5em;
   font-size: 1.5em;
-  
-  height: 2.8em;
+  height: 2em;
+  padding-top: 0.8em;
+}
+
+#navigation {
+ padding-top: 0.5em; 
+}
+
+.search {
+  padding-bottom: 1em;
+  float: right;
+}
+
+#q {
+  height: 1.75em;
+  padding-bottom: 0.2em;
+  border-radius: 0.5em;
+  font-size: 1em;
+}
+
+#searchbutton {
+  height: 2.4em;
+  margin-bottom: 0.1em;
 }
 
 /**** footer ****/
