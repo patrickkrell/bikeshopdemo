@@ -17,3 +17,11 @@
 @import "products"
 @import "simple_pages"
 @import "scaffolds"
+
+/**** contact ****/
+
+.address {
+  color: #104E8B;
+  font-size: 22em;
+
+}

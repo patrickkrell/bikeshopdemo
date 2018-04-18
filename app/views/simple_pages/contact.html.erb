@@ -2,25 +2,41 @@
 
 <h1>Contact</h1>
 
-<p>Please contact me here <br> <br> mail@patrickkrell.de<br>0202 898 37 925<br>Lise-Meitner-Str. 5-9<br>42119 Wuppertal<br>	 
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <%= flash[:notice] %>
 
-<%= flash[:notice] %>
+      <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+      <div class="row">
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control input-lg", placeholder: "Enter Name" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: "form-control input-lg", maxlength: "50px",  placeholder: "Enter Email" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :message %>
+          <%= form.text_area :message, class: "form-control input-lg", maxlength: "50px",  placeholder: "Enter Message", rows: 5 %>
+        </div>
+      </div>
+      <%= form.submit "Send", class: "form_label btn btn-default" %><br><br>
+      <% end %>
+    </div>
 
-<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :message %>
-    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+      <div class="col-md-6">
+        <div class="address">
+          <h2>Or you can contact me here: </h2>
+          <p>mail@patrickkrell.de</p>
+          <p>0202 898 37 925</p>
+          <p>Lise-Meitner-Str. 5-9</p>
+          <p>42119 Wuppertal</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<%= form.submit "Send", class: "form_label" %>
-<% end %>
+
+
