@@ -17,7 +17,7 @@
   </head>
 
   <body>
-  
+
 	<nav>
     <div class="container-fluid">
       <div class="row">
@@ -30,9 +30,16 @@
             <li class="<%= yield(:orders) %>"><%= link_to "Orders", orders_path %></li>
           </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="search">
             <ul>  
+              <li>
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>    
+              </li>
               <li>
                 <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
                 <%= form.text_field :q, id: 'q', value: params[:q], class: "form-controll", placeholder: " Looking for a Bike?" %>
@@ -44,9 +51,10 @@
         </div>
       </div>
     </div>
-	  
-   
 	</nav>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
     <%= yield %>
 
