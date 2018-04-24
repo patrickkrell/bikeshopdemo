@@ -1,3 +1,5 @@
+<% provide(:title, "Bike Details") %>
+
 <p id="notice"><%= notice %></p>
 
 <div class="container-fludi">
@@ -28,6 +30,9 @@
         <strong>Price:</strong>
         <%= number_to_currency(@product.price, unit: '€', precision: 2) %>
       </p>
+
+      <%= @product.highest_rating_comment %>
+
     </div> <!-- end col -->
   </div> <!-- end row -->
 </div> <!-- end container -->
