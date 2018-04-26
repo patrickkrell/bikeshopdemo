@@ -42,6 +42,8 @@ gem 'cancancan', '~> 1.10'
 
 gem 'devise'
 
+gem 'will_paginate', '~> 3.1.1'
+
 group :production do 
   gem 'pg', '~> 0.20'
 end
