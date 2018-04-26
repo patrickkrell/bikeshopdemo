@@ -31,7 +31,14 @@
         <%= number_to_currency(@product.price, unit: '€', precision: 2) %>
       </p>
 
-      <%= @product.highest_rating_comment %>
+      <p>
+        <strong>Average Rating:</strong> 
+        <div class="rated" data-score="<%= @product.average_rating %>"></div> 
+      </p>
+
+      <%= render 'new_comment' %>
+
+      <%= render 'comments' %>
 
     </div> <!-- end col -->
   </div> <!-- end row -->
