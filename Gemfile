@@ -44,6 +44,8 @@ gem 'devise'
 
 gem 'will_paginate', '~> 3.1.1'
 
+gem 'rails-controller-testing'
+
 group :production do 
   gem 'pg', '~> 0.20'
 end
