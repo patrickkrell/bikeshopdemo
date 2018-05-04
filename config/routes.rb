@@ -13,9 +13,10 @@ Rails.application.routes.draw do
   get 'simple_pages/about'
   get 'simple_pages/contact'
 
+
   get 'simple_page/products' 
   get 'simple_page/orders'
-  
+
   root 'simple_pages#landing_page'
 
   post 'simple_pages/thank_you'
