@@ -46,6 +46,8 @@ gem 'will_paginate', '~> 3.1.1'
 
 gem 'rails-controller-testing'
 
+gem 'stripe'
+
 group :production do 
   gem 'pg', '~> 0.20'
 end
@@ -55,7 +57,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.7'
-  gem "factory_bot_rails", "~> 4.0"
+  gem 'factory_bot_rails', '~> 4.0'
 end
 
 group :development do
