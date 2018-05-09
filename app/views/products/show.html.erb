@@ -13,20 +13,26 @@
     </div> <!-- end col -->
 
     <div class="col-md-6 product">
+      <% cache @product do %>
       <p>
         <strong>Name:</strong>
         <%= @product.name %>
       </p>
-
+      <% end %>
+      
+      <% cache @product do %>
       <p>
         <strong>Description:</strong>
         <%= @product.description %>
       </p>
-
+      <% end %>
+      
+      <% cache @product do %>
       <p>
         <strong>Colour:</strong>
         <%= @product.colour %>
       </p>
+      <% end %>
 
       <p>
         <strong>Price:</strong>

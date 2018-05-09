@@ -50,6 +50,8 @@ gem 'stripe'
 
 gem 'brakeman'
 
+gem 'dalli'
+
 group :production do 
   gem 'pg', '~> 0.20'
 end
