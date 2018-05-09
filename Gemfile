@@ -52,6 +52,10 @@ gem 'brakeman'
 
 gem 'dalli'
 
+gem 'redis-rails'
+
+gem 'newrelic_rpm'
+
 group :production do 
   gem 'pg', '~> 0.20'
 end
