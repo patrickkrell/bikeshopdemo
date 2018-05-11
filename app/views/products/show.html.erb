@@ -3,7 +3,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container-fludi">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-md-6">
       <p>
       <% if @product.image_url.present? %>
