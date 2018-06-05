@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   get 'simple_page/products' 
   get 'simple_page/orders'
 
-
   post 'simple_pages/thank_you'
 
   post 'payments/create'

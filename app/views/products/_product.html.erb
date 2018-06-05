@@ -1,7 +1,9 @@
 <% cache product do %> 
   <div class="col-md-4">
     <a href="#"><h2><%= product.name %></h2></a>
+    <%= link_to root_path do %>
     <%= image_tag(product.image_url, class: "img-responsive") if product.image_url %>
+    <% end %>
     <p><%= product.description %></p>
     <p>Colour: <%= product.colour %></p>
     <p> Only <%= number_to_currency(product.price, unit: '€', precision: 2) %></p> 
