@@ -13,7 +13,7 @@ FactoryBot.define do
     email 
     password "test123"
     admin true
-    first_name "Pat"
+    first_name "Patrick"
     last_name "Krell"
   end 
 
