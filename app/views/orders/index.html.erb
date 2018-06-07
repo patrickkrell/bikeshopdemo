@@ -4,8 +4,12 @@
     <% @orders.each do |order| %>
       <div class="orders col-sm-2 col-md-4">
         <h1>
-          Order # <%= order.id %>:
-          <%= link_to order.product.name, order %>
+          Order # <%= order.id %>
+          <% if order.product %>
+            <%= link_to order.product.name, order %>
+          <% else %>
+            <p>No Orders</p>
+          <% end %>    
         </h1>
         <p>
         <%= image_tag(order.product.image_url, class: "img-responsive") %>
