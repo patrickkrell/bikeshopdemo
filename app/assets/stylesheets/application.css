@@ -20,12 +20,16 @@
 
 /**** contact ****/
 
-.address {
-  color: #104E8B;
-  font-size: 22em;
-
+.address h2 {
+  font-size: 2em;
 }
 
+.address p {
+  color: #104E8B;
+  font-size: 1.5em;
+  padding-top: 1em;
+  line-height: 0em;
+}
 
 /**** product show ****/
 
@@ -72,3 +76,5 @@
   margin-bottom: 0.3em;
   text-align: center; 
 }
+
+
