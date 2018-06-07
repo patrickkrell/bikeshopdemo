@@ -11,11 +11,7 @@
             <p>No Orders</p>
           <% end %>
         </h1>
-        <p>
-        <% if order.product.image_url %>  
-        <%= image_tag(order.product.image_url, class: "img-responsive") %>
-        <% end %>
-        </p>
+        <p><%= image_tag(order.product.image_url, class: "img-responsive") %></p>
         <p><%= order.product.description %></p>
         <strong><%= number_to_currency(order.product.price, unit: '€', precision: 2) %></strong>
       </div><!-- /col -->
